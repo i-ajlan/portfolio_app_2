@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+
+  .icon-styles:hover{
+    /* background-color: black !important; */
+    border: 1px solid #8B5CF6;
+    border-radius: 50%;
+  }
+  .new-height{
+    min-height: calc(100vh - 72px);
+  }
+
+  .show-title{
+    @apply [&+span]:block;
+  }
+  .nav-full-screen{
+    @apply fixed new-height w-screen right-0 bg-black top-[72px]  m-0 [&>ul]:flex-col  [&>ul]:h-full [&>ul]:items-center [&>ul]:w-full [&>ul]:gap-4 [&>ul]:text-4xl z-[999px]; 
+  }
+}
+
