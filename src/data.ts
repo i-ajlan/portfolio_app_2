@@ -20,7 +20,7 @@ export const about_me =[
 
 export const my_projects = [
     {
-        title: 'MyPortfolio(This website)',
+        title: 'MyPortfolio(This_website)',
         link: '',
         frontend_link: '',
         backend_link:'',
@@ -33,7 +33,7 @@ export const my_projects = [
         link: 'https://i-ajlan.github.io/chat_app_frontEnd/',
         frontend_link:'https://github.com/i-ajlan/chat_app_frontEnd',
         backend_link:'https://github.com/i-ajlan/chat_app_api',
-        image: new URL('./assets/website.jpeg', import.meta.url).href,
+        image: new URL('./assets/img03.jpeg', import.meta.url).href,
         technologies:['react','vite','supabase', 'node', 'express', 'socket.io']
     },
     {
@@ -41,7 +41,7 @@ export const my_projects = [
         link: 'https://i-ajlan.github.io/insta-like/',
         frontend_link:'https://github.com/i-ajlan/insta-like',
         backend_link:'',
-         image: new URL('./assets/website.jpeg', import.meta.url).href,
+        image: new URL('./assets/img04.jpeg', import.meta.url).href,
         technologies:['React.js', 'vite', 'React-router-dom']
     },  
     {
@@ -49,15 +49,7 @@ export const my_projects = [
         link: 'https://i-ajlan.github.io/insta-like/',
         frontend_link:'https://github.com/i-ajlan/insta-like',
         backend_link:'',
-         image: new URL('./assets/website.jpeg', import.meta.url).href,
-        technologies:['React.js', 'vite', 'React-router-dom']
-    },  
-    {
-        title: 'Insta_like',
-        link: 'https://i-ajlan.github.io/insta-like/',
-        frontend_link:'https://github.com/i-ajlan/insta-like',
-        backend_link:'',
-         image: new URL('./assets/website.jpeg', import.meta.url).href,
+         image: new URL('./assets/img02.webp', import.meta.url).href,
         technologies:['React.js', 'vite', 'React-router-dom']
     },  
 ]

@@ -1,4 +1,4 @@
-import {about_me} from './data'
+import {about_me} from './data.ts'
 import {useState} from 'react' 
 
 type DataType = {
@@ -13,7 +13,7 @@ const About_me = () => {
   
   return (
     <section className="flex justify-center content-center">
-      <div className="flex-1 bg-black max-w-4xl rounded-xl text-2xl p-4 text-white grid grid-cols-[auto_1fr]">
+      <div className="flex-1 bg-white dark:bg-black max-w-4xl rounded-xl text-2xl p-4 text-black dark:text-white grid grid-cols-[auto_1fr]">
          <div className="border-r-[1px] border-gray-500 -translate-x-4">
       {
         data.map((item,index)=>{

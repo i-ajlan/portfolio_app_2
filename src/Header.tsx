@@ -1,8 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import profileImg from './img/profilePicture.png'
 
 const Header = () => {
+    const [newColorScheme, setNewColorScheme] = useState<boolean>(false)
 
     useEffect(()=>{
         const headerButton = document.getElementById('headerButton') as HTMLElement;
@@ -22,6 +23,15 @@ const Header = () => {
         return () => headerButton.removeEventListener('click', handleClick)
     },[])
 
+    useEffect(()=>{
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            setNewColorScheme( event.matches);
+        });
+        return () => window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', event => {
+            setNewColorScheme(event.matches);
+        })
+    },[])
+
   return (
     <header className=" text-xl flex justify-center bg-white dark:bg-black dark:text-white">
         <section className=" flex flex-1 justify-between max-w-4xl p-4">
@@ -35,9 +45,9 @@ const Header = () => {
 
             <nav id='header_nav' className='origin-top invisible sm:visible h-full'>
                 <ul  className='flex gap-2 content-stretch h-full'>
-                    <li className=' hover:bg-slate-400 focus:bg-slate-400 px-4 hover:border-white focus:border-white hover:border-4 focus:border-4 rounded-2xl'><NavLink to="/">welcome</NavLink></li>
-                    <li className=' hover:bg-slate-400 focus:bg-slate-400 px-4 hover:border-white focus:border-white hover:border-4 focus:border-4 rounded-2xl'><NavLink to="/about_me">about me</NavLink></li>
-                    <li className=' hover:bg-slate-400 focus:bg-slate-400 px-4 hover:border-white focus:border-white hover:border-4 focus:border-4 rounded-2xl'><NavLink to="my_projects">my projects</NavLink></li>
+                    <li className=' hover:bg-slate-400 focus:bg-slate-400 px-4 hover:border-white focus:border-white hover:border-4 focus:border-4 rounded-2xl'><NavLink to="/" style={({isActive})=>isActive?{color:newColorScheme?'#8b5cf6':'blue'}:{}}>welcome</NavLink></li>
+                    <li className=' hover:bg-slate-400 focus:bg-slate-400 px-4 hover:border-white focus:border-white hover:border-4 focus:border-4 rounded-2xl'><NavLink to="/about_me" style={({isActive})=>isActive?{color:newColorScheme?'#8b5cf6':'blue'}:{}}>about me</NavLink></li>
+                    <li className=' hover:bg-slate-400 focus:bg-slate-400 px-4 hover:border-white focus:border-white hover:border-4 focus:border-4 rounded-2xl'><NavLink to="my_projects" end style={({isActive})=>isActive?{color:newColorScheme?'#8b5cf6':'blue'}:{}}>my projects</NavLink></li>
                 </ul>
             </nav>
             </div>
