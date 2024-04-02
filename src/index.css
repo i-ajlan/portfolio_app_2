@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
+@layer utilities{
+
+  .isIntersecting{
+    color: yellow;
+  }
+}
+
 @layer components{
 
   .icon-styles:hover{
@@ -10,6 +17,8 @@
     border: 1px solid #8B5CF6;
     border-radius: 50%;
   }
+
+
   .new-height{
     min-height: calc(100vh - 72px);
   }

@@ -1,7 +1,7 @@
 // import website from './assets/website.jpeg'
 const now = Date.now()
-const Birthdate = new Date('May 3, 2000')
-const age = ((now - Birthdate)/(3.154e10))
+const birthdate = new Date('May 3, 2000')
+const age = ((now - birthdate)/(3.154e10))
 export const about_me =[
     {
         title: 'general',
@@ -24,7 +24,8 @@ export const my_projects = [
         link: '',
         frontend_link: '',
         backend_link:'',
-        image: new URL('./assets/website.jpeg', import.meta.url).href,
+        image1: new URL('./assets/website.jpeg', import.meta.url).href,
+        image2:'',
         technologies:['React.js', 'material-ui']
 
     },
@@ -32,8 +33,9 @@ export const my_projects = [
         title: 'chat_app',
         link: 'https://i-ajlan.github.io/chat_app_frontEnd/',
         frontend_link:'https://github.com/i-ajlan/chat_app_frontEnd',
-        backend_link:'https://github.com/i-ajlan/chat_app_api',
-        image: new URL('./assets/img03.jpeg', import.meta.url).href,
+        backend_link:'https://github.com/i-ajlan/chat_app_api', 
+        image1: new URL('./assets/img03.jpeg', import.meta.url).href,
+        image2:'',
         technologies:['react','vite','supabase', 'node', 'express', 'socket.io']
     },
     {
@@ -41,7 +43,8 @@ export const my_projects = [
         link: 'https://i-ajlan.github.io/insta-like/',
         frontend_link:'https://github.com/i-ajlan/insta-like',
         backend_link:'',
-        image: new URL('./assets/img04.jpeg', import.meta.url).href,
+        image1: new URL('./assets/img04.jpeg', import.meta.url).href,
+        image2:'',
         technologies:['React.js', 'vite', 'React-router-dom']
     },  
     {
@@ -49,8 +52,18 @@ export const my_projects = [
         link: 'https://i-ajlan.github.io/insta-like/',
         frontend_link:'https://github.com/i-ajlan/insta-like',
         backend_link:'',
-         image: new URL('./assets/img02.webp', import.meta.url).href,
+        image1: new URL('./assets/img02.webp', import.meta.url).href,
+        image2:'',
         technologies:['React.js', 'vite', 'React-router-dom']
+    },  
+    {
+        title: 'Food_app',
+        link: 'https://i-ajlan.github.io/insta-like/',
+        frontend_link:'https://github.com/i-ajlan/insta-like',
+        backend_link:'',
+        image1: new URL('./assets/img05-1.png', import.meta.url).href,
+        image2: new URL('./assets/img05-2.png', import.meta.url).href,
+        technologies:['React.js', 'vite', 'React-router-dom','node.js','express', 'mongodb']
     },  
 ]
 

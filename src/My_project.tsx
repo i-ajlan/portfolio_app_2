@@ -8,17 +8,18 @@ import { Link } from 'react-router-dom';
     link: string,
     frontend_link?:string,
     backend_link?:string,
-    image?:string,
+    image1?:string,
+    image2?:string,
     technologies:string[]
 }
 
 const My_project = () => {
-    const [data, useData] = useState<DataType[]>(my_projects);
+    const [data] = useState<DataType[]>(my_projects);
     const {name} = useParams();
 
 
 
-     const{title, link, frontend_link, backend_link, image, technologies}: DataType = data.find((item)=>item.title == name) as DataType;
+     const{title, link, frontend_link, backend_link, image1, technologies} = data.find((item)=>item.title == name) as DataType;
 
     //  console.log(title)
   return (
@@ -30,7 +31,7 @@ const My_project = () => {
             Go back
           </Link>
           <figure className='relative h-full aspect-[2/4]'>
-            <img src={image} alt="" className='rounded-2xl object-cover absolute h-full w-full'/>
+            <img src={image1} alt="" className='rounded-2xl object-cover absolute w-full'/>
           </figure>
           <ul>
             <li>Title: <span className='uppercase text-blue-600 dark:text-[#8b5cf6]'>{title}</span></li>
